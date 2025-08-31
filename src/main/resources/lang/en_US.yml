@@ -1,0 +1,95 @@
+# BilibiliVideoQRCodeOneBot Plugin Messages - English
+
+# Player command related messages
+playerOnly: "&cThis command can only be executed by players!"
+alreadyBound: "&cYou have already bound a QQ account! Please unbind first if you want to change."
+existingRequest: "&eYou already have an ongoing binding request!"
+notBound: "&cYou haven't bound a QQ account yet!"
+bindHint: "&7Use /qqbind to start the binding process"
+unbindConfirm: "&ePlease confirm the unbind operation within 30 seconds, type /qqbind unbind confirm to confirm"
+unbindSuccess: "&aUnbind successful! Your QQ account has been unlinked from the game account."
+unbindFailed: "&cUnbind failed! Please try again later or contact an administrator."
+playerOnlySubCommand: "&cThis subcommand can only be executed by players!"
+
+# QR code binding process messages
+requestCode: "&7Verification code: &e{0}"
+requestRemaining: "&7Remaining time: &e{0}"
+bindUsage: |
+  &a=== QQ Account Binding Tutorial ===
+  &71. Add the bot QQ as friend
+  &72. Send private message to bot: !bind {0}
+  &73. Wait for binding confirmation message
+  &cNote: Verification code will expire in {1} minutes
+codeGenerated: |
+  &aVerification code generated!
+  &7Your verification code is: &e{0}
+  &7Please complete binding within &c{1} minutes
+
+# Binding information display messages
+bindingInfoTitle: "&7=== Binding Information ==="
+bindingInfoPlayer: "&7Player: &f{0}"
+bindingInfoQQ: "&7QQ Number: &f{0}"
+bindingInfoTime: "&7Bind Time: &f{0}"
+
+# System status messages
+systemStatusTitle: "&7=== Binding System Status ==="
+onebotConnected: "&a OneBot Connection Status: Connected"
+onebotDisconnected: "&e OneBot Connection Status: Disconnected"
+bindingStatusBound: "&a Binding Status: Bound"
+bindingStatusUnbound: "&e Binding Status: Unbound"
+pendingRequestExists: "&e Pending Request: Exists"
+pendingRequestNone: "&7 Pending Request: None"
+
+# Pending request information
+pendingRequestTitle: "&eOngoing binding request:"
+pendingRequestCode: "&7Verification code: &e{0}"
+pendingRequestRemaining: "&7Remaining time: &e{0}"
+
+# Available command list
+availableCommands: "&7Available commands:"
+commandBind: "&7/qqbind - Start binding process"
+commandUnbind: "&7/qqbind unbind - Unbind account"
+commandInfo: "&7/qqbind info - View binding information"
+commandStatus: "&7/qqbind status - View system status"
+
+# QQ bot messages
+qqHelp: |
+  🤖 QQ Binding Bot Help
+  
+  Available commands:
+  !bind <code> - Bind game account
+  !unbind - Unbind account
+  !info - View binding information
+  !help - Show this help
+  
+  To bind, please execute /qqbind command in-game first to get verification code.
+
+qqBindUsage: |
+  Usage: !bind <verification_code>
+  Please execute /qqbind command in-game first to get verification code.
+
+qqBindSuccess: |
+  ✅ Binding successful!
+  Player: {0}
+  QQ: {1}
+  Time: {2}
+
+qqBindFailed: "❌ Binding failed! Invalid or expired verification code."
+qqUnbindFailed: "❌ Unbind failed! Please try again later."
+qqInvalidCode: "❌ Invalid verification code format! Please send 6-digit verification code."
+qqNoBindingRequest: "❌ No binding request found! Please execute /qqbind command in-game first."
+qqAlreadyBound: |
+  ❌ This QQ number is already bound to another player!
+  Please contact administrator if you need to rebind.
+qqUnbindSuccess: "✅ Unbind successful!"
+qqNotBound: "❌ You haven't bound any game account."
+
+qqInfo: |
+  📊 Binding Information
+  Player: {0}
+  QQ: {1}
+  Bind Time: {2}
+
+# In-game notification messages
+bindSuccessNotification: "&aBinding successful! Your QQ number &e{0} &ahas been successfully bound to your game account."
+unbindSuccessNotification: "&cUnbind successful! Your QQ number &e{0} &chas been unlinked from your game account."

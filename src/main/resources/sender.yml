@@ -1,0 +1,60 @@
+# BilibiliVideoQRCodeOneBot 二维码发送器配置文件
+
+# 发送器基本设置
+sender:
+  # 发送器唯一ID
+  id: "onebot"
+  
+  # 发送器显示名称
+  name: "OneBot二维码发送器"
+  
+  # 是否启用发送器
+  enabled: true
+  
+  # 发送失败重试次数
+  retry-count: 3
+  
+  # 发送超时时间（毫秒）
+  timeout: 30000
+
+# 消息模板设置
+messages:
+  # 二维码消息头部
+  qrcode-header: |
+    🔗 Bilibili登录二维码
+    请使用手机扫描以下链接中的二维码完成登录：
+  
+  # 二维码消息尾部  
+  qrcode-footer: |
+    
+    📱 扫码步骤：
+    1. 打开链接
+    2. 使用哔哩哔哩APP扫描二维码
+    3. 确认登录
+    
+    ⏰ 二维码有效期：3分钟
+    ❗ 请不要将链接分享给他人
+  
+  # 发送成功提示（游戏内）
+  send-success: "§a二维码已发送到你的QQ，请查收！"
+  
+  # 发送失败提示（游戏内）
+  send-failed: "§c发送二维码失败，请检查QQ绑定状态或稍后重试。"
+  
+  # 未绑定QQ提示（游戏内）
+  not-bound: |
+    §c你还没有绑定QQ账户！
+    §7请先使用 §e/qqbind §7命令绑定QQ，然后再尝试登录。
+  
+  # OneBot不可用提示（游戏内）
+  onebot-unavailable: |
+    §c OneBot机器人服务暂时不可用！
+    §7请联系管理员检查机器人连接状态，或使用其他登录方式。
+
+# 调试设置
+debug:
+  # 是否启用调试模式
+  enabled: false
+  
+  # 是否记录二维码内容到日志（安全考虑，默认关闭）
+  log-qrcode-content: false

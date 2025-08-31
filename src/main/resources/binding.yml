@@ -1,0 +1,21 @@
+# BilibiliVideoQRCodeOneBot - 绑定功能配置文件
+# 本配置文件只包含核心功能配置，消息内容已迁移至语言文件
+
+# 验证码配置
+verification:
+  # 验证码长度（位数）
+  code-length: 6
+  # 验证码过期时间（分钟）
+  expiry-minutes: 5
+
+# 命令设置
+commands:
+  # 绑定命令设置
+  bind:
+    enabled: true
+    aliases: ["qqbind", "bind"]
+  
+  # 解绑命令设置
+  unbind:
+    enabled: true
+    aliases: ["qqunbind", "unbind"]

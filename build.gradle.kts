@@ -33,6 +33,7 @@ taboolib {
         }
     }
     version { taboolib = "6.2.3-2eb93b5" }
+    relocate("com.google.zxing", "online.bingzi.bilibili.video.qrcode.onebot.library.zxing")
 }
 
 repositories {
@@ -46,6 +47,11 @@ dependencies {
     compileOnly(kotlin("stdlib"))
     compileOnly(fileTree("libs"))
     compileOnly("online.bingzi:onebot:1.2.0-65732a8")
+    compileOnly("online.bingzi:bilibilivideo:1.9.0-48bdaa8")
+
+    // 二维码生成依赖
+    taboo("com.google.zxing:core:3.5.3")
+    taboo("com.google.zxing:javase:3.5.3")
 }
 
 tasks.withType<JavaCompile> {
