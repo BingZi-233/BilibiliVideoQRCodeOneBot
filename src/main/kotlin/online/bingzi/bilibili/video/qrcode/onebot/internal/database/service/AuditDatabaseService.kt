@@ -46,14 +46,13 @@ object AuditDatabaseService {
     ) {
         submitAsync {
             try {
-                table.insert(dataSource) {
-                    value("player_uuid", playerUuid)
-                    value("qq_number", qqNumber)
-                    value("action", action.name)
-                    value("success", if (host is HostSQLite) if (success) 1 else 0 else success)
-                    value("reason", reason)
-                    value("operator", operator)
-                    value("timestamp", System.currentTimeMillis())
+                table.insert(dataSource,
+                    "player_uuid", "qq_number", "action", "success", 
+                    "reason", "operator", "timestamp"
+                ) {
+                    value(playerUuid, qqNumber, action.name, 
+                          if (host is HostSQLite) if (success) 1 else 0 else success,
+                          reason, operator, System.currentTimeMillis())
                 }
             } catch (e: Exception) {
                 severe("记录审计日志失败: ${e.message}")
